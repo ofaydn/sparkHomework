@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+<h1>Employee</h1>
+<table>
+    <thead>
+    <tr>
+        <th>empno</th>
+        <th>ename</th>
+        <th>job</th>
+        <th>mgr</th>
+        <th>hiredate</th>
+        <th>sal</th>
+        <th>comm</th>
+        <th>dept</th>
+        <th>img</th>
+    </tr><!--"empno","ename","job","mgr","hiredate","sal","comm","dept","img" -->
+    <tr th:each="emp: ${employeeList}">
+        <td th:text="${emp.empno}"></td>
+        <td th:text="${emp.ename}"></td>
+        <td th:text="${emp.job}"></td>
+        <td th:text="${emp.mgr}"></td>
+        <td th:text="${emp.hiredate}"></td>
+        <td th:text="${emp.sal}"></td>
+        emp.sal
+        <td th:text="${emp.comm}"></td>
+        <td th:text="${emp.dept}"></td>
+        <td><img height="50px" th:src="@{'http://127.0.0.1:9870/webhdfs/v1/user/hadoop/app/images/' + ${emp.img} + '?op=OPEN'}"
+                 width="50px"/></td>
+    </tr>
+    </thead>
+
+</table>
+</body>
+</html>
