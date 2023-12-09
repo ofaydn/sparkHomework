@@ -1,2 +1,0 @@
-# sparkHomework
-sparkHomework
